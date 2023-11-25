@@ -18,6 +18,20 @@
 
 
 ## Sobre 
+O projeto se trata de uma simulação de uma batalha naval maluca, que é composta pelos seguintes agentes:
+
+<!--TO DO DESCREVER CADA FUNCAO DE CADA AGENTE-->
+
+- Barco submarino;
+- Porta-avião; 
+- Cruzador;
+- Torpedeiro; 
+- Morteiro; 
+- Contra-Torpedeiro; 
+- Contra-Morteiro; 
+
+Cada agente tem sua própria função na simulação. Inicialmente o jogo deixa o usuário configurar a quantidade de agentes que espera de cada agente, ao iniciar simula como seria a batalha naval maluca, de acordo com cada objetivo dos agentes. 
+
 Descreva o seu projeto em linhas gerais. 
 Use referências, links, que permitam conhecer um pouco mais sobre o projeto.
 Capriche nessa seção, pois ela é a primeira a ser lida pelos interessados no projeto.
