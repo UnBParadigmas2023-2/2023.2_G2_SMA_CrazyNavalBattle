@@ -5,27 +5,26 @@ As seções do Template NÃO DEVEM SER OMITIDAS, sendo TODAS RELEVANTES.
 **!! *Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(Paradigma)_(NomeDoProjeto)*. !!** 
 
 Paradigmas:
- - Funcional
- - Logico
  - SMA
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2023.2_G1_Logico_ProjetoRoteirosAereos*. !!**
- 
- (Apague esses comentários)
-
-# NomeDoProjeto
+   
+# Crazy Naval Battle
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
-**Nro do Grupo (de acordo com a Planilha de Divisão dos Grupos)**: XX<br>
-**Paradigma**: XXXXXXXXXX<br>
+**Nro do Grupo (de acordo com a Planilha de Divisão dos Grupos)**: 02<br>
+**Paradigma**: Sistemas Multiagentes<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 20/0013181 | Adne Moretti Moreira |
+| 20/0057227 | Caio Vitor Carneiro de Oliveira |
+| 19/0085819 | Cícero Barrozo Fernandes Filho |
+| 19/0045817 | Gabriel Costa de Oliveira |
+| 20/0018205 | Gabriel Moretti de Souza |
+| 20/0019015 | Guilherme Puida Moreira |
+| 20/0067923 | João Henrique Marques Calzavara |
+| 20/2023903 | Lucas Lopes Rocha |
+
 
 ## Sobre 
 Descreva o seu projeto em linhas gerais. 
@@ -36,8 +35,8 @@ Capriche nessa seção, pois ela é a primeira a ser lida pelos interessados no 
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
+**Linguagens**: Python<br>
+**Tecnologias**: Mesa, Matplotlob<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
 Gifs animados e outras ilustrações são bem-vindos!
