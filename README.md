@@ -5,8 +5,6 @@ As seções do Template NÃO DEVEM SER OMITIDAS, sendo TODAS RELEVANTES.
 **!! *Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(Paradigma)_(NomeDoProjeto)*. !!** 
 
 Paradigmas:
- - Funcional
- - Logico
  - SMA
 
 **!! *Não coloque os nomes dos alunos no título do repositório*. !!**
