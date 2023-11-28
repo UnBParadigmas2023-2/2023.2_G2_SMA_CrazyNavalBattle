@@ -1,13 +1,3 @@
-
-Paradigmas:
- - SMA
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2023.2_G1_Logico_ProjetoRoteirosAereos*. !!**
- 
- (Apague esses comentários)
-
 # Crazy Naval Battle
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
@@ -28,23 +18,25 @@ Paradigmas:
 
 
 ## Sobre 
-O projeto se trata de uma simulação de uma batalha naval maluca, que é composta pelos seguintes agentes:
 
-<!--TO DO DESCREVER CADA FUNCAO DE CADA AGENTE-->
+O projeto **Crazy Naval Battle** é uma simulação envolvente de uma batalha naval maluca, desenvolvida utilizando a linguagem de programação **Python** e a biblioteca **Mesa** para criação da interface gráfica. A abordagem adotada para modelar o comportamento dinâmico dos elementos na simulação é baseada no paradigma de **Sistemas Multiagentes (SMA)**.
 
-- Barco submarino;
-- Porta-avião; 
-- Cruzador;
-- Torpedeiro; 
-- Morteiro; 
-- Contra-Torpedeiro; 
-- Contra-Morteiro; 
+<!--TO DO DESCREVER A FUNCAO DE CADA AGENTE -->
+#### Agentes Envolvidos na Batalha:
+- **Barco Submarino:** Especializado em estratégias furtivas e ataques surpresa.
+- **Porta-Avião:** Oferece suporte aéreo e serve como uma base móvel para aeronaves.
+- **Cruzador:** Equilíbrio entre mobilidade e poder de fogo.
+- **Torpedeiro:** Focado em ataques de longa distância com torpedos.
+- **Morteiro:** Agente de longo alcance especializado em causar danos significativos.
+- **Contra-Torpedeiro:** Destinado a neutralizar ameaças de torpedos.
+- **Contra-Morteiro:** Especializado em defesa contra agentes de longo alcance.
 
-Cada agente tem sua própria função na simulação. Inicialmente o jogo deixa o usuário configurar a quantidade de agentes que espera de cada agente, ao iniciar simula como seria a batalha naval maluca, de acordo com cada objetivo dos agentes. 
+#### Configuração Personalizada:
+O jogo permite que os usuários personalizem a quantidade de cada agente antes de iniciar a simulação, oferecendo uma experiência única a cada execução. Essa flexibilidade proporciona a criação de cenários diversos, desafiando os jogadores a explorar estratégias diferentes em cada simulação.
 
-Descreva o seu projeto em linhas gerais. 
-Use referências, links, que permitam conhecer um pouco mais sobre o projeto.
-Capriche nessa seção, pois ela é a primeira a ser lida pelos interessados no projeto.
+#### Paradigma de Sistemas Multiagentes (SMA):
+O desenvolvimento do "Crazy Naval Battle" adota o paradigma de Sistemas Multiagentes, proporcionando uma representação fiel das interações complexas entre os diferentes agentes. Cada agente é autônomo, respondendo dinamicamente às condições do ambiente e às ações dos outros agentes, resultando em uma simulação envolvente e estratégica.
+
 
 ## Screenshots
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
@@ -62,28 +54,55 @@ Procure ilustrar em passos, com apoio de telas do software, seja com base na int
 Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
 
 ## Vídeo
-Adicione 1 ou mais vídeos com a execução do projeto.
-Procure: 
-(i) Introduzir o projeto;
-(ii) Mostrar passo a passo o código, explicando-o, e deixando claro o que é de terceiros, e o que é contribuição real da equipe;
-(iii) Apresentar particularidades do Paradigma, da Linguagem, e das Tecnologias, e
-(iV) Apresentar lições aprendidas, contribuições, pendências, e ideias para trabalhos futuros.
-OBS: TODOS DEVEM PARTICIPAR, CONFERINDO PONTOS DE VISTA.
-TEMPO: +/- 15min
+O vídeo de apresentação está disponível em:
+
+- Youtube: [ACESSO]()
+- GitHub: [ACESSO]()
 
 ## Participações
-Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
-| -- | -- | -- |
-| Fulano  |  Programação dos Fatos da Base de Conhecimento Lógica | Boa |
+| -- | :--: | :--: |
+| Adne Moretti Moreira | - | - |
+| Caio Vitor Carneiro de Oliveira | - | - |
+| Cícero Barrozo Fernandes Filho | - | - |
+| Gabriel Costa de Oliveira | - | - |
+| Gabriel Moretti de Souza | - | - |
+| Guilherme Puida Moreira | - | - |
+| João Henrique Marques Calzavara | - | - |
+| Lucas Lopes Rocha | - | - |
 
 ## Outros 
-Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
-(i) Lições Aprendidas;
-(ii) Percepções;
-(iii) Contribuições e Fragilidades, e
-(iV) Trabalhos Futuros.
+
+### Lições Aprendidas
+
+- **Sistema Multiagentes (SMA):** A principal lição aprendida foi a aplicação do paradigma de Sistemas Multiagentes (SMA) no desenvolvimento da simulação de batalha naval maluca. Utilizar SMA permitiu a modelagem de agentes autônomos interativos, representando diferentes unidades navais com comportamentos distintos. Isso facilitou a compreensão e simulação de estratégias e interações complexas entre os agentes.
+- **Configuração Dinâmica:** Lidar com a configuração dinâmica do número de agentes de cada tipo foi desafiador. A flexibilidade do SMA permitiu a adaptação fácil do sistema às preferências do usuário, proporcionando uma experiência personalizada na simulação.
+- **Interconexão de Agentes:** Compreendemos como estabelecer interconexões eficientes entre os agentes, facilitando a comunicação e coordenação durante a simulação. Isso desempenhou um papel crucial na dinâmica da batalha naval maluca.
+
+### Contribuições
+
+- **Modelagem Eficiente dos Agentes:** Conseguimos criar com sucesso um ambiente de simulação onde diversos agentes, como submarinos, porta-aviões e contra-morteiros, interagem de forma autônoma e estratégica.
+- **Personalização da Experiência:** A flexibilidade do SMA permitiu que os usuários personalizassem a quantidade de cada tipo de agente na simulação, proporcionando diferentes cenários de batalha.
+
+### Fragilidades
+
+- **Concorrência de Projetos Acadêmicos:** Uma fragilidade significativa foi a concorrência de tempo devido aos projetos acadêmicos de outras disciplinas no fim do semestre. As demandas adicionais de outras disciplinas da faculdade impactaram a disponibilidade da equipe para se dedicar integralmente ao desenvolvimento.
+- **Curva de Aprendizado do Paradigma SMA:** A adaptação ao paradigma de Sistemas Multiagentes exigiu esforço da equipe de desenvolvimento. A compreensão das interações e dinâmicas entre os agentes, bem como a implementação eficaz das estratégias, demandou tempo e ajustes.
+
+### Possíveis Melhorias
+
+- **Ampliação da Variedade de Agentes:** Buscar adicionar novos tipos de agentes para enriquecer a simulação, considerando diferentes habilidades e comportamentos na batalha.
+- **Inteligência Artificial Avançada:** Incorporar técnicas avançadas de inteligência artificial para melhorar a tomada de decisões dos agentes, tornando a simulação mais realista e desafiadora.
+- **Interface Gráfica Aprimorada:** Investir em uma interface gráfica mais intuitiva e visualmente atrativa para proporcionar uma experiência de simulação mais envolvente.
+- **Avaliações de Estratégias:** Realizar avaliações contínuas das estratégias dos agentes, ajustando parâmetros conforme necessário para garantir uma simulação equilibrada e desafiadora.
+- **Documentação Detalhada:** Fornecer uma documentação abrangente sobre a configuração de agentes, estratégias disponíveis e parâmetros de simulação para facilitar a compreensão e personalização por parte dos usuários.
+- **Exploração de Ambientes 3D:** Explorar a possibilidade de representar a simulação em ambientes 3D para uma experiência mais imersiva e visualmente rica.
 
 ## Fontes
-Referencie, adequadamente, as referências utilizadas.
-Indique ainda sobre fontes de leitura complementares.
+> Inspirado em: https://github.com/UnBParadigmas2023-1/2023.1_G5_SMA_Campo_De_Batalha;
+
+> Linguagem de programação: https://www.python.org/;
+
+> Interface gráfica (Mesa): https://mesa.readthedocs.io/en/stable/;
+
+> Sistemas Multiagentes (SMA): https://pt.wikipedia.org/wiki/Sistema_multiagente;
