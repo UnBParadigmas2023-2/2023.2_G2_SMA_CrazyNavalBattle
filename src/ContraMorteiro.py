@@ -1,13 +1,21 @@
-#Podemos iniciar a vida de cada agente com uma quantidade especifica, normalmente o contratorpedeiro ocupa 3 espacos no grid e por isso acho que podemos colocar uma vida de 3 pra ele, objetivo de destruir os morteiros
-class ContraMorteiro(): 
-    def __init__(self, posicao, qtd, vida):
-        self.posicao = posicao
-        self.qtd = qtd
+import mesa
 
-    def defend(): 
-        pass
+from src.boat import BoatAgent
 
-    def attack(): 
-        pass
+class ContraMorteiro(BoatAgent): 
+    def __init__(
+        self,
+        pos: tuple[int, int],
+        affiliation: str,
+        model: mesa.Model,
+    ):
+        super().__init__(pos, affiliation, model)
 
+    def base_damage(self):
+        return 1
 
+    def base_health_points(self):
+        return 10
+
+    def base_range(self):
+        return 5
