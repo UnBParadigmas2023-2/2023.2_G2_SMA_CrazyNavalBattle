@@ -1,7 +1,9 @@
-from ContraMorteiro import ContraMorteiro
-from utils import generate_random_position
+import mesa
 
-class NavalBattleModel(mesa.model): 
+from src.ContraMorteiro import ContraMorteiro
+from src.utils import generate_random_position
+
+class NavalBattleModel(mesa.Model): 
     def __init__(
             self, 
             num_cruzador, 
@@ -14,12 +16,12 @@ class NavalBattleModel(mesa.model):
         ): 
 
         self.num_cruzador = num_cruzador
-        self.num_torpedeiro = num_torpedeiro 
-        self.num_moreteiro = num_morteiro 
+        self.num_torpedeiro = num_torpedeiro
+        self.num_morteiro = num_morteiro
         self.num_contra_torpedeiro = num_contra_torpedeiro
         self.num_contra_morteiro = num_contra_morteiro
         self.is_running = True
-        slef.grid = mesa.space.Multigrid(width, heigth, True)
+        self.grid = mesa.space.Multigrid(width, height, True)
         self.schedule = mesa.time.RandomActivation(self)
         # Criacao de N agentes para cada tipo de agente
 
