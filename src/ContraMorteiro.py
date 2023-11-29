@@ -28,8 +28,15 @@ class ContraMorteiro(BoatAgent):
             target.receive_damage(self.calculate_damage())
 
     def move(self):
-        # Lógica específica do movimento do Morteiro (se houver)
-        pass
+        # Coloquei logica de mover nas diagonais (primeira que encontrar vazia)
+        a, b = self.pos
+        moves = [(1, 1), (-1, -1), (1, -1), (-1, 1)]
+        for x, y in moves: 
+            new_position = (a+x, b+y)
+            if self.grid.is_cell_empty(new_position):
+                self.pos = new_position
+                self.model.grid.move_agent(self, self.pos)
+                return 
 
     def calculate_damage(self):
         # Calcula o dano total, levando em consideração o dano base e quaisquer modificadores adicionais
