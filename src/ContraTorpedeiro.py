@@ -1,14 +1,16 @@
 import mesa
 from src.boat import BoatAgent
+from src.Cruzador import Cruzador
 
 class ContraTorpedeiro(BoatAgent):
     def __init__(
         self,
         pos: tuple[int, int],
         affiliation: str,
+        type: str,
         model: mesa.Model,
     ):
-        super().__init__(pos, affiliation, model)
+        super().__init__(pos, affiliation, type, model)
 
     def base_damage(self):
         return 2  # Dano moderado, focado em defesa e interceptação
@@ -42,7 +44,7 @@ class ContraTorpedeiro(BoatAgent):
 
     def calculate_damage(self):
         # Calcula o dano total
-        return self.base_damage()
+        return self.base_damage() + self.count_buffs()
 
     def receive_damage(self, damage):
         # Reduz os pontos de vida com base no dano recebido
