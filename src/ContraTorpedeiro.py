@@ -1,6 +1,7 @@
 import mesa
 from src.boat import BoatAgent
 from src.Cruzador import Cruzador
+from src.Affiliation import Affiliation
 
 class ContraTorpedeiro(BoatAgent):
     def __init__(
@@ -26,8 +27,8 @@ class ContraTorpedeiro(BoatAgent):
         enemies_in_range = list(self._enemies_in_range())
         if enemies_in_range:
             # Priorizar atacar torpedeiros se estiverem no alcance
-            torpedeiros = [e for e in enemies_in_range if isinstance(e, Torpedeiro)]
-            target = self.model.random.choice(torpedeiros) if torpedeiros else self.model.random.choice(enemies_in_range)
+            #torpedeiros = [e for e in enemies_in_range if isinstance(e, Torpedeiro)]
+            target = self.model.random.choice(enemies_in_range)
             target.receive_damage(self.calculate_damage())
 
     def move(self):

@@ -4,14 +4,11 @@ from src.Affiliation import Affiliation
 import mesa
 
 class BoatAgent(mesa.Agent):
-    _health_points: int
-    _affiliation: Affiliation
-    _type: str
 
     def __init__(
         self,
         pos: tuple[int, int],
-        affiliation: str,
+        affiliation: Affiliation,
         type: str,
         model: mesa.Model,
     ):

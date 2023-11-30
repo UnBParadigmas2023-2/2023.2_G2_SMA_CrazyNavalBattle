@@ -1,4 +1,5 @@
 import mesa
+from src.Affiliation import Affiliation
 
 from src.boat import BoatAgent
 
@@ -6,7 +7,7 @@ class ContraMorteiro(BoatAgent):
     def __init__(
         self,
         pos: tuple[int, int],
-        affiliation: str,
+        affiliation: Affiliation,
         type: str,
         model: mesa.Model,
     ):

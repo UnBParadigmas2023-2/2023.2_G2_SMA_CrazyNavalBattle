@@ -1,11 +1,14 @@
 import mesa
 from src.boat import BoatAgent
+from src.Affiliation import Affiliation
+
+
 
 class Torpedeiro(BoatAgent):
     def __init__(
         self,
         pos: tuple[int, int],
-        affiliation: str,
+        affiliation: Affiliation,
         type: str,
         model: mesa.Model,
     ):
