@@ -6,9 +6,10 @@ class Torpedeiro(BoatAgent):
         self,
         pos: tuple[int, int],
         affiliation: str,
+        type: str,
         model: mesa.Model,
     ):
-        super().__init__(pos, affiliation, model)
+        super().__init__(pos, affiliation, type, model)
 
     def base_damage(self):
         return 4  # Dano base maior do Torpedeiro
@@ -40,7 +41,7 @@ class Torpedeiro(BoatAgent):
 
     def calculate_damage(self):
         # Calcula o dano total
-        return self.base_damage()
+        return self.base_damage() + self.count_buffs()
 
     def receive_damage(self, damage):
         # Reduz os pontos de vida com base no dano recebido

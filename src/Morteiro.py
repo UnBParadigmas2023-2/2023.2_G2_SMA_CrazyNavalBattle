@@ -6,9 +6,10 @@ class Morteiro(BoatAgent):
         self,
         pos: tuple[int, int],
         affiliation: str,
+        type: str,
         model: mesa.Model,
     ):
-        super().__init__(pos, affiliation, model)
+        super().__init__(pos, affiliation, type, model)
 
     def base_damage(self):
         return 3  # Define o dano base do Morteiro
@@ -32,7 +33,7 @@ class Morteiro(BoatAgent):
 
     def calculate_damage(self):
         # Calcula o dano total, levando em consideração o dano base e quaisquer modificadores adicionais
-        return self.base_damage()
+        return self.base_damage() + self.count_buffs()
 
     def receive_damage(self, damage):
         # Reduz os pontos de vida com base no dano recebido

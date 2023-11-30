@@ -33,7 +33,5 @@ boats_colors = {
 def render(): 
     return 
 
-
-
 canvas_element = mesa.visualization.CanvasGrid(render, 100, 100, 700, 700)
 server = mesa.visualization.ModularServer(NavalBattleModel, [canvas_element], "CrazyNavalBattle", model_params)
