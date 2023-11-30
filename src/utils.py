@@ -1,3 +1,10 @@
+def generate_random_position(model,filled_positions):
+    pos = None
+    while pos is None or pos in filled_positions:
+        x = model.random.randrange(model.grid.width)
+        y = model.random.randrange(model.grid.height // 3)
+        pos = (x, y)
+    return pos
 
 def dist(a, b):
     return max(abs(a[0] - b[0]), abs(a[1] - b[1]))
