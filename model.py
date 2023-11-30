@@ -15,7 +15,7 @@ class NavalBattleModel(mesa.Model):
             width, 
             height
         ): 
-
+        self.filled_positions = []
         self.num_cruzador = num_cruzador
         self.num_torpedeiro = num_torpedeiro
         self.num_morteiro = num_morteiro
@@ -24,15 +24,17 @@ class NavalBattleModel(mesa.Model):
         self.is_running = True
         self.grid = mesa.space.MultiGrid(width, height, True)
         self.schedule = mesa.time.RandomActivation(self)
-        self.create_contra_morteiros()
-        #self.create_morteiros()# Criacao de N agentes para cada tipo de agent1e
-
-    def create_contra_morteiros(self): 
-        for i in range(1): 
-            contra_morteiro = ContraMorteiro((3, 2), "morteiro", self)
-            self.schedule.add(contra_morteiro)
-            #new_position = generate_random_position()
-            self.grid.place_agent(contra_morteiro, (3, 2))
+        self.create_agents(ContraMorteiro, self.num_contra_morteiro, "enemy")
+        self.create_agents(Morteiro, self.num_morteiro, "ally")
+        self.running = True
+        
+    def create_agents(self,AgentClass,num_agents,type): 
+        for _ in range(num_agents): 
+            new_position=generate_random_position(self,self.filled_positions)
+            agent = AgentClass(new_position, self, type)
+            self.filled_positions.append(new_position)
+            self.schedule.add(agent)
+            self.grid.place_agent(agent, new_position)
 
 #    def create_morteiros(self): 
 #        for i in range(self.num_contra_morteiro): 

@@ -1,5 +1,9 @@
 from model import NavalBattleModel
 import mesa
+from src.boat import BoatAgent
+from src.ContraMorteiro import ContraMorteiro
+from src.Morteiro import Morteiro
+
 
 model_params = {
     "num_cruzador": mesa.visualization.Slider(
@@ -18,8 +22,8 @@ model_params = {
     "num_contra_morteiro": mesa.visualization.Slider(
         "Quantidade inicial de contra morteiros", 20, 0, 100
     ),
-    "width": 100, 
-    "height": 100 
+    "width": 35, 
+    "height": 35 
 }
 
 
@@ -30,10 +34,31 @@ boats_colors = {
     "contra_torpedeiro":"" 
 }
 
-def render(): 
-    return 
+def render(agent): 
+    if agent is None:
+        return
+
+    portrayal = {
+        "Filled": "true",
+        "Layer": 0,
+        "text_color": "White",
+    }
+
+    agent_color = "azul"
+
+    if type(agent) is BoatAgent:
+        portrayal["Shape"] = f"./src/assets/navio.png"
+    elif type(agent) is ContraMorteiro:
+        portrayal["Shape"] = f"./src/assets/fumaca.png"
+    elif type(agent) is Morteiro:
+        portrayal["Shape"] = f"./src/assets/arma-de-morteiro.png"
+
+    # make subtitle in canvas_elements
+    # portrayal["life"] = (
+    #     f"{agent.life:.2f}" if hasattr(agent, "life") else "∞"
+    # )
+    return portrayal
 
 
-
-canvas_element = mesa.visualization.CanvasGrid(render, 100, 100, 700, 700)
+canvas_element = mesa.visualization.CanvasGrid(render, 35, 35, 700, 700)
 server = mesa.visualization.ModularServer(NavalBattleModel, [canvas_element], "CrazyNavalBattle", model_params)
