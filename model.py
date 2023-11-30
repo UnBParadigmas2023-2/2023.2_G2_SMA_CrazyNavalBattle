@@ -36,11 +36,18 @@ class NavalBattleModel(mesa.Model):
             self.schedule.add(agent)
             self.grid.place_agent(agent, new_position)
 
-#    def create_morteiros(self): 
-#        for i in range(self.num_contra_morteiro): 
-#            morteiro = Morteiro()
-#            self.schedule.add(morteiro)
-#            new_position = generate_random_position()
-#            self.grid.place_agent(a, new_position)
-#
+    def step(self):
+        vermelhos = azuis = 0
+        for agent in self.schedule.agents:
+            if agent.affiliation == 1:
+                vermelhos += 1
+            elif agent.affiliation == 2:
+                azuis += 1
+
+        if vermelhos == 0 or azuis == 0:
+            self.running = False
+            return
+
+        self.schedule.step()
+
      

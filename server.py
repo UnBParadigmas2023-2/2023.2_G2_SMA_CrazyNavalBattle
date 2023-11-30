@@ -59,6 +59,5 @@ def render(agent):
     # )
     return portrayal
 
-
 canvas_element = mesa.visualization.CanvasGrid(render, 35, 35, 700, 700)
 server = mesa.visualization.ModularServer(NavalBattleModel, [canvas_element], "CrazyNavalBattle", model_params)
