@@ -36,6 +36,7 @@ class NavalBattleModel(mesa.Model):
             self.schedule.add(agent)
             self.grid.place_agent(agent, new_position)
 
+
     def step(self):
         vermelhos = azuis = 0
         for agent in self.schedule.agents:

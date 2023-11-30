@@ -1,8 +1,7 @@
 import mesa
-
 from src.boat import BoatAgent
 
-class ContraMorteiro(BoatAgent): 
+class Torpedeiro(BoatAgent):
     def __init__(
         self,
         pos: tuple[int, int],
@@ -13,34 +12,35 @@ class ContraMorteiro(BoatAgent):
         super().__init__(pos, affiliation, type, model)
 
     def base_damage(self):
-        return 1
+        return 4  # Dano base maior do Torpedeiro
 
     def base_health_points(self):
-        return 10
+        return 8  # Menos pontos de vida, refletindo uma estrutura mais frágil
 
     def base_range(self):
-        return 5
+        return 3  # Menor alcance, torpedos são armas de curto alcance
 
     def operate(self):
-        # Lógica específica do Morteiro durante a operação
+        # Lógica de operação do Torpedeiro
         enemies_in_range = list(self._enemies_in_range())
         if enemies_in_range:
             target = self.model.random.choice(enemies_in_range)
             target.receive_damage(self.calculate_damage())
 
     def move(self):
-        # Coloquei logica de mover nas diagonais (primeira que encontrar vazia)
+        # Lógica de movimento mais avançada, permitindo maior mobilidade
+        # Mover em qualquer direção, não apenas diagonal
         a, b = self.pos
-        moves = [(1, 1), (-1, -1), (1, -1), (-1, 1)]
-        for x, y in moves: 
+        moves = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+        for x, y in moves:
             new_position = (a+x, b+y)
-            if self.grid.is_cell_empty(new_position):
+            if self.model.grid.is_cell_empty(new_position):
                 self.pos = new_position
                 self.model.grid.move_agent(self, self.pos)
                 return 
 
     def calculate_damage(self):
-        # Calcula o dano total, levando em consideração o dano base e quaisquer modificadores adicionais
+        # Calcula o dano total
         return self.base_damage() + self.count_buffs()
 
     def receive_damage(self, damage):
