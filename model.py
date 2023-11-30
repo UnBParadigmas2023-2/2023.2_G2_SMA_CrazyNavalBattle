@@ -22,22 +22,23 @@ class NavalBattleModel(mesa.Model):
         self.num_contra_torpedeiro = num_contra_torpedeiro
         self.num_contra_morteiro = num_contra_morteiro
         self.is_running = True
-        self.grid = mesa.space.Multigrid(width, height, True)
+        self.grid = mesa.space.MultiGrid(width, height, True)
         self.schedule = mesa.time.RandomActivation(self)
-        # Criacao de N agentes para cada tipo de agente
+        self.create_contra_morteiros()
+        #self.create_morteiros()# Criacao de N agentes para cada tipo de agent1e
 
     def create_contra_morteiros(self): 
-        for i in range(self.num_contra_morteiro): 
-            contra_morteiro = ContraMorteiro()
+        for i in range(1): 
+            contra_morteiro = ContraMorteiro((3, 2), "morteiro", self)
             self.schedule.add(contra_morteiro)
-            new_position = generate_random_position()
-            self.grid.place_agent(a, new_position)
+            #new_position = generate_random_position()
+            self.grid.place_agent(contra_morteiro, (3, 2))
 
-    def create_morteiros(self): 
-        for i in range(self.num_contra_morteiro): 
-            morteiro = Morteiro()
-            self.schedule.add(morteiro)
-            new_position = generate_random_position()
-            self.grid.place_agent(a, new_position)
-
+#    def create_morteiros(self): 
+#        for i in range(self.num_contra_morteiro): 
+#            morteiro = Morteiro()
+#            self.schedule.add(morteiro)
+#            new_position = generate_random_position()
+#            self.grid.place_agent(a, new_position)
+#
      

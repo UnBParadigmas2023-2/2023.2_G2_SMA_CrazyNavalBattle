@@ -1,4 +1,3 @@
-from model import NavalBattleModel 
+from server import server
 
-starter_model = NavalBattleModel(_, _, _, _, _)
-starter_model.step()
+server.launch()
