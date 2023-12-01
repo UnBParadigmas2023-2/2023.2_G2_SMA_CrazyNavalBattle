@@ -30,10 +30,9 @@ class BoatAgent(mesa.Agent):
         self.operate()
         self.move(self.get_next_position())
         
-    @abstractmethod
     def operate(self):
         for enemy in self._enemies_in_range():
-            enemy.receive_damage(self.calculate_damage())
+            enemy.receive_damage(self.calculate_damage(), self._type)
 
     def move(self, pos):
         if self.pos is None:
@@ -107,5 +106,11 @@ class BoatAgent(mesa.Agent):
         # Calcula o dano total, levando em consideração o dano base e quaisquer modificadores adicionais
         return self.base_damage() + self.count_buffs()
 
-    def receive_damage(self, damage):
+    def receive_damage(self, damage, enemy_type):
+        if enemy_type in self.strong_against():
+            damage /= 2
+
         self._health_points -= damage
+
+    def strong_against(self):
+        return set()
