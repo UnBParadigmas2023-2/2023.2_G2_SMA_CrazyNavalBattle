@@ -47,11 +47,37 @@ Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcioname
 
 ## Instalação
 
-**Linguagens**: Python<br>
-**Tecnologias**: Mesa, Matplotlib<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
-Gifs animados e outras ilustrações são bem-vindos!
+**Linguagens**: Python
+
+**Tecnologias**: Mesa, Matplotlib
+
+Para executar o projeto, é necessário uma instalação do Python 3.
+Em sistemas Debian (ou derivados):
+
+```
+sudo apt install python3 python3-venv
+```
+
+Crie um `venv` usando:
+
+```
+python3 -m venv .venv
+```
+
+Ative o `venv` e instale as dependências:
+
+```
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+E rode o projeto:
+
+```
+python3 run.py
+```
+
+A interface estará disponível em `localhost:8521`.
 
 ## Uso
 
