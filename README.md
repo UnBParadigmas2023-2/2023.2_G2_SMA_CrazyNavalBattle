@@ -79,6 +79,16 @@ python3 run.py
 
 A interface estará disponível em `localhost:8521`.
 
+Para automatizar esse processo, disponibilizamos um `Makefile` para
+rodar o projeto. Após a instalação do `python3` e `python3-venv`, use:
+
+```
+make run
+```
+
+Esse comando automaticamente cria um `venv`, instala as dependências e
+executa o servidor.
+
 ## Uso
 
 Explique como usar seu projeto.
