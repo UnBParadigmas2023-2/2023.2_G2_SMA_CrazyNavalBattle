@@ -15,9 +15,12 @@ class BoatAgent(mesa.Agent):
         super().__init__(pos, model)
         self._affiliation = affiliation
         self._type = type
-        self._health_points = self.base_health_points()
+        self._health_points = self.base_health_points() * 25
 
     def step(self):
+        if self.pos is None:
+            return
+
         if self._health_points <= 0:
             self.model.grid.remove_agent(self)
             self.model.schedule.remove(self)
@@ -25,15 +28,20 @@ class BoatAgent(mesa.Agent):
         # TODO: consider switching the order of operations here.
         #       maybe it makes sense to move before operating.
         self.operate()
-        self.move()
+        self.move(self.get_next_position())
         
     @abstractmethod
     def operate(self):
         for enemy in self._enemies_in_range():
             enemy.receive_damage(self.calculate_damage())
-            
 
-    def move(self):
+    def move(self, pos):
+        if self.pos is None:
+            return
+
+        self.model.grid.move_agent(self, pos)
+
+    def get_next_position(self):
         if self.pos is None:
             return
 
@@ -48,10 +56,7 @@ class BoatAgent(mesa.Agent):
         ]
 
         self.model.random.shuffle(possibilities)
-        pos = possibilities[0]
-
-        self.model.grid.move_agent(self, pos)
-      
+        return possibilities[0]
 
     @abstractmethod
     def base_damage(self):
