@@ -13,6 +13,9 @@ class Morteiro(BoatAgent):
     ):
         super().__init__(pos, affiliation, type, model)
 
+    def get_next_position(self):
+        return self.pos # Morteiros não se movem
+
     def base_damage(self):
         return 3  # Define o dano base do Morteiro
 
@@ -21,7 +24,3 @@ class Morteiro(BoatAgent):
 
     def base_range(self):
         return 8  # Define o alcance base do Morteiro
-
-    # def move(self):
-    #     # Lógica específica do movimento do Morteiro (se houver)
-    #     pass
