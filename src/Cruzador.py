@@ -24,19 +24,6 @@ class Cruzador(BoatAgent):
     def base_range(self):
         return 2  # Define o alcance base do Cruzador
 
-    def operate(self):
-        # Lógica específica do Cruzador durante a operação
-        enemies_in_range = list(self._enemies_in_range())
-        if enemies_in_range:
-            target = self.model.random.choice(enemies_in_range)
-            target.receive_damage(self.calculate_damage())
-            
-    def receive_damage(self, damage):
-        # Reduz os pontos de vida com base no dano recebido
-        self._health_points -= damage
-        if self._health_points <= 0:
-            self.model.grid.remove_agent(self)
-
     # def move(self):
     #     # Lógica específica do movimento do Cruzador (se houver)
     #     # Coloquei logica de mover em todas as direções (primeira que encontrar vazia)

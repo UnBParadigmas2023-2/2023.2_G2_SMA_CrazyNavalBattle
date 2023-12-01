@@ -18,6 +18,10 @@ class BoatAgent(mesa.Agent):
         self._health_points = self.base_health_points()
 
     def step(self):
+        if self._health_points <= 0:
+            self.model.grid.remove_agent(self)
+            self.model.schedule.remove(self)
+
         # TODO: consider switching the order of operations here.
         #       maybe it makes sense to move before operating.
         self.operate()
@@ -25,23 +29,29 @@ class BoatAgent(mesa.Agent):
         
     @abstractmethod
     def operate(self):
-        raise NotImplementedError
+        for enemy in self._enemies_in_range():
+            enemy.receive_damage(self.calculate_damage())
+            
 
     def move(self):
-        target_pos =  closest_enemy(currentAgent=self)
+        if self.pos is None:
+            return
+
+        possibilities = self.model.grid.get_neighborhood(
+            self.pos, moore=True, include_center=False, radius=1
+        )
+
         possibilities = [
-            *filter(
-                self.model.grid.is_cell_empty,
-                self.model.grid.get_neighborhood(
-                    self.pos, moore=True, include_center=False, radius=1
-                ),
-            )
+            x
+            for x in possibilities
+            if self.model.grid.is_cell_empty(x)
         ]
-        print('TARGET POS', target_pos)
-        print('SELF POS', self.pos)
 
         self.model.random.shuffle(possibilities)
-        return min(possibilities, key=lambda pos: dist(pos, target_pos.pos), default=self.pos)
+        pos = possibilities[0]
+
+        self.model.grid.move_agent(self, pos)
+      
 
     @abstractmethod
     def base_damage(self):
@@ -56,6 +66,9 @@ class BoatAgent(mesa.Agent):
         raise NotImplementedError
 
     def _enemies_in_range(self):
+        if self.pos is None:
+            return
+
         for element in self.model.grid.iter_neighbors(
             self.pos,
             moore=True,
@@ -65,6 +78,9 @@ class BoatAgent(mesa.Agent):
                 yield element
     
     def _allies_in_range(self):
+        if self.pos is None:
+            return
+
         for element in self.model.grid.iter_neighbors(
             self.pos,
             moore=True,
@@ -78,7 +94,6 @@ class BoatAgent(mesa.Agent):
         allies_in_range = list(self._allies_in_range())
         total_buff = 0
         for allie in allies_in_range:
-            print('ALLIE', allie)
             if allie._type == "Cruzador":
                 total_buff += self.base_buff() if total_buff < 5 else 0
         return total_buff
@@ -86,3 +101,6 @@ class BoatAgent(mesa.Agent):
     def calculate_damage(self):
         # Calcula o dano total, levando em consideração o dano base e quaisquer modificadores adicionais
         return self.base_damage() + self.count_buffs()
+
+    def receive_damage(self, damage):
+        self._health_points -= damage

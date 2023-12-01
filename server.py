@@ -115,7 +115,7 @@ def design_model(agent):
         portrayal["Shape"] = f"./src/assets/{time}/morteiro_{time}.png"
     # make subtitle in canvas_elements
     portrayal["life"] = (
-        f"{agent.life:.2f}" if hasattr(agent, "life") else "∞"
+        f"{agent._health_points:.2f}" if hasattr(agent, "_health_points") else "∞"
     )
     return portrayal
 

@@ -23,13 +23,6 @@ class Torpedeiro(BoatAgent):
     def base_range(self):
         return 3  # Menor alcance, torpedos são armas de curto alcance
 
-    def operate(self):
-        # Lógica de operação do Torpedeiro
-        enemies_in_range = list(self._enemies_in_range())
-        if enemies_in_range:
-            target = self.model.random.choice(enemies_in_range)
-            target.receive_damage(self.calculate_damage())
-
     # def move(self):
     #     # Lógica de movimento mais avançada, permitindo maior mobilidade
     #     # Mover em qualquer direção, não apenas diagonal
@@ -41,13 +34,3 @@ class Torpedeiro(BoatAgent):
     #             self.pos = new_position
     #             self.model.grid.move_agent(self, self.pos)
     #             return 
-
-    def calculate_damage(self):
-        # Calcula o dano total
-        return self.base_damage() + self.count_buffs()
-
-    def receive_damage(self, damage):
-        # Reduz os pontos de vida com base no dano recebido
-        self._health_points -= damage
-        if self._health_points <= 0:
-            self.model.grid.remove_agent(self)
