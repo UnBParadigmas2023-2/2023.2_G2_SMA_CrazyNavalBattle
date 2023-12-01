@@ -86,8 +86,6 @@ model_params = {
 def render(): 
     return 
 
-
-
 def enemy_ally_quantity(model):
     fla = [r for r in model.schedule.agents if Affiliation.FLAMENGO == r._affiliation]
     flu = [p for p in model.schedule.agents if Affiliation.FLUMINENSE == p._affiliation]
@@ -108,13 +106,11 @@ def design_model(agent):
     if type(agent) is Torpedeiro:
         portrayal["Shape"] = f"./src/assets/{time}/torpedeiro_{time}.png"
     elif type(agent) is ContraTorpedeiro:
-        portrayal["Shape"] = f"./src/assets/{time}/contraTorpedeiro_{time}.png"
-        pass
+        portrayal["Shape"] = f"./src/assets/{time}/contratorpedeiro_{time}.png"
     elif type(agent) is Cruzador:
         portrayal["Shape"] = f"./src/assets/{time}/navio_{time}.png"
     elif type(agent) is ContraMorteiro:
-        portrayal["Shape"] = f"./src/assets/{time}/contraMorteiro_{time}.png"
-        pass
+        portrayal["Shape"] = f"./src/assets/{time}/contramorteiro_{time}.png"
     elif type(agent) is Morteiro:
         portrayal["Shape"] = f"./src/assets/{time}/morteiro_{time}.png"
     # make subtitle in canvas_elements
@@ -125,8 +121,7 @@ def design_model(agent):
 
 
 canvas_elements = mesa.visualization.CanvasGrid(design_model, 15, 15, 1000, 1000)
-server = mesa.visualization.ModularServer(NavalBattleModel, [canvas_elements], "CrazyNavalBattle", model_params)
-
+ 
 server = mesa.visualization.ModularServer(
     NavalBattleModel,
     [

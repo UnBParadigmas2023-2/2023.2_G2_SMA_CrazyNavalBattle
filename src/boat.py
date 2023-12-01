@@ -1,13 +1,13 @@
 from abc import abstractmethod
 from src.Affiliation import Affiliation
-
+from src.utils import closest_enemy, dist
 import mesa
 
 class BoatAgent(mesa.Agent):
 
     def __init__(
         self,
-        pos: tuple[int, int],
+        pos,
         affiliation: Affiliation,
         type: str,
         model: mesa.Model,
@@ -22,14 +22,26 @@ class BoatAgent(mesa.Agent):
         #       maybe it makes sense to move before operating.
         self.operate()
         self.move()
-
+        
     @abstractmethod
     def operate(self):
         raise NotImplementedError
 
-    @abstractmethod
     def move(self):
-        raise NotImplementedError
+        target_pos =  closest_enemy(currentAgent=self)
+        possibilities = [
+            *filter(
+                self.model.grid.is_cell_empty,
+                self.model.grid.get_neighborhood(
+                    self.pos, moore=True, include_center=False, radius=1
+                ),
+            )
+        ]
+        print('TARGET POS', target_pos)
+        print('SELF POS', self.pos)
+
+        self.model.random.shuffle(possibilities)
+        return min(possibilities, key=lambda pos: dist(pos, target_pos.pos), default=self.pos)
 
     @abstractmethod
     def base_damage(self):
@@ -47,18 +59,18 @@ class BoatAgent(mesa.Agent):
         for element in self.model.grid.iter_neighbors(
             self.pos,
             moore=True,
-            radius=self.base_range,
+            radius=self.base_range(),
         ):
-            if element.affiliation != self.affiliation:
+            if element._affiliation != self._affiliation:
                 yield element
     
     def _allies_in_range(self):
         for element in self.model.grid.iter_neighbors(
             self.pos,
             moore=True,
-            radius=self.base_range,
+            radius=self.base_range(),
         ):
-            if element.affiliation == self.affiliation:
+            if element._affiliation == self._affiliation:
                 yield element
 
     def count_buffs(self):
@@ -66,7 +78,8 @@ class BoatAgent(mesa.Agent):
         allies_in_range = list(self._allies_in_range())
         total_buff = 0
         for allie in allies_in_range:
-            if allie.type == "Cruzador":
+            print('ALLIE', allie)
+            if allie._type == "Cruzador":
                 total_buff += self.base_buff() if total_buff < 5 else 0
         return total_buff
 

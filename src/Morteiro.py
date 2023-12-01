@@ -6,7 +6,7 @@ from src.Affiliation import Affiliation
 class Morteiro(BoatAgent):
     def __init__(
         self,
-        pos: tuple[int, int],
+        pos,
         affiliation: Affiliation,
         type: str,
         model: mesa.Model,
@@ -29,9 +29,9 @@ class Morteiro(BoatAgent):
             target = self.model.random.choice(enemies_in_range)
             target.receive_damage(self.calculate_damage())
 
-    def move(self):
-        # Lógica específica do movimento do Morteiro (se houver)
-        pass
+    # def move(self):
+    #     # Lógica específica do movimento do Morteiro (se houver)
+    #     pass
 
     def calculate_damage(self):
         # Calcula o dano total, levando em consideração o dano base e quaisquer modificadores adicionais

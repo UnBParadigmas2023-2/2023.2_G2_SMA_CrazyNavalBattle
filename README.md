@@ -5,24 +5,26 @@
 **Paradigma**: SMA<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| 20/0013181 | Adne Moretti Moreira |
+
+| Matrícula  | Aluno                           |
+| ---------- | ------------------------------- |
+| 20/0013181 | Adne Moretti Moreira            |
 | 20/0057227 | Caio Vitor Carneiro de Oliveira |
-| 19/0085819 | Cícero Barrozo Fernandes Filho |
-| 19/0045817 | Gabriel Costa de Oliveira |
-| 20/0018205 | Gabriel Moretti de Souza |
-| 20/0019015 | Guilherme Puida Moreira |
+| 19/0085819 | Cícero Barrozo Fernandes Filho  |
+| 19/0045817 | Gabriel Costa de Oliveira       |
+| 20/0018205 | Gabriel Moretti de Souza        |
+| 20/0019015 | Guilherme Puida Moreira         |
 | 20/0067923 | João Henrique Marques Calzavara |
-| 20/2023903 | Lucas Lopes Rocha |
+| 20/2023903 | Lucas Lopes Rocha               |
 
-
-## Sobre 
+## Sobre
 
 O projeto **Crazy Naval Battle** é uma simulação envolvente de uma batalha naval maluca, desenvolvida utilizando a linguagem de programação **Python** e a biblioteca **Mesa** para criação da interface gráfica. A abordagem adotada para modelar o comportamento dinâmico dos elementos na simulação é baseada no paradigma de **Sistemas Multiagentes (SMA)**.
 
 <!--TO DO DESCREVER A FUNCAO DE CADA AGENTE -->
+
 #### Agentes Envolvidos na Batalha:
+
 - **Barco Submarino:** Especializado em estratégias furtivas e ataques surpresa.
 - **Porta-Avião:** Oferece suporte aéreo e serve como uma base móvel para aeronaves.
 - **Cruzador:** Equilíbrio entre mobilidade e poder de fogo.
@@ -32,46 +34,52 @@ O projeto **Crazy Naval Battle** é uma simulação envolvente de uma batalha na
 - **Contra-Morteiro:** Especializado em defesa contra agentes de longo alcance.
 
 #### Configuração Personalizada:
+
 O jogo permite que os usuários personalizem a quantidade de cada agente antes de iniciar a simulação, oferecendo uma experiência única a cada execução. Essa flexibilidade proporciona a criação de cenários diversos, desafiando os jogadores a explorar estratégias diferentes em cada simulação.
 
 #### Paradigma de Sistemas Multiagentes (SMA):
+
 O desenvolvimento do "Crazy Naval Battle" adota o paradigma de Sistemas Multiagentes, proporcionando uma representação fiel das interações complexas entre os diferentes agentes. Cada agente é autônomo, respondendo dinamicamente às condições do ambiente e às ações dos outros agentes, resultando em uma simulação envolvente e estratégica.
 
-
 ## Screenshots
+
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
-## Instalação 
+## Instalação
+
 **Linguagens**: Python<br>
 **Tecnologias**: Mesa, Matplotlib<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
 Gifs animados e outras ilustrações são bem-vindos!
 
-## Uso 
+## Uso
+
 Explique como usar seu projeto.
 Procure ilustrar em passos, com apoio de telas do software, seja com base na interface gráfica, seja com base no terminal.
 Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
 
 ## Vídeo
+
 O vídeo de apresentação está disponível em:
 
 - Youtube: [ACESSO]()
 - GitHub: [ACESSO]()
 
 ## Participações
-|Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
-| -- | :--: | :--: |
-| Adne Moretti Moreira | - | - |
-| Caio Vitor Carneiro de Oliveira | - | - |
-| Cícero Barrozo Fernandes Filho | - | - |
-| Gabriel Costa de Oliveira | - | - |
-| Gabriel Moretti de Souza | - | - |
-| Guilherme Puida Moreira | - | - |
-| João Henrique Marques Calzavara | - | - |
-| Lucas Lopes Rocha | - | - |
 
-## Outros 
+| Nome do Membro                  | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
+| ------------------------------- | :----------: | :----------------------------------------------------------------------------: |
+| Adne Moretti Moreira            |      -       |                                       -                                        |
+| Caio Vitor Carneiro de Oliveira |      -       |                                       -                                        |
+| Cícero Barrozo Fernandes Filho  |      -       |                                       -                                        |
+| Gabriel Costa de Oliveira       |      -       |                                       -                                        |
+| Gabriel Moretti de Souza        |      -       |                                       -                                        |
+| Guilherme Puida Moreira         |      -       |                                       -                                        |
+| João Henrique Marques Calzavara |      -       |                                       -                                        |
+| Lucas Lopes Rocha               |      -       |                                       -                                        |
+
+## Outros
 
 ### Lições Aprendidas
 
@@ -99,6 +107,7 @@ O vídeo de apresentação está disponível em:
 - **Exploração de Ambientes 3D:** Explorar a possibilidade de representar a simulação em ambientes 3D para uma experiência mais imersiva e visualmente rica.
 
 ## Fontes
+
 > Inspirado em: https://github.com/UnBParadigmas2023-1/2023.1_G5_SMA_Campo_De_Batalha;
 
 > Linguagem de programação: https://www.python.org/;

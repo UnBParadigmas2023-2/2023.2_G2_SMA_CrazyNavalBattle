@@ -37,9 +37,8 @@ class NavalBattleModel(mesa.Model):
         self.num_contra_torpedeiro_flu = num_contra_torpedeiro_flu
         self.num_contra_morteiro_flu = num_contra_morteiro_flu
 
-        self.is_running = True
         self.grid = mesa.space.MultiGrid(width, height, True)
-        self.schedule = mesa.time.RandomActivation(self)
+        self.schedule = mesa.time.SimultaneousActivation(self)
         self.create_agents(Cruzador, self.num_cruzador_fla, Affiliation.FLAMENGO)
         self.create_agents(Torpedeiro, self.num_torpedeiro_fla, Affiliation.FLAMENGO)
         self.create_agents(Morteiro, self.num_morteiro_fla, Affiliation.FLAMENGO)
@@ -64,9 +63,9 @@ class NavalBattleModel(mesa.Model):
     def step(self):
         flamengo = fluminense = 0
         for agent in self.schedule.agents:
-            if agent._affiliation == 1:
+            if agent._affiliation == Affiliation.FLAMENGO:
                 flamengo += 1
-            elif agent._affiliation == 2:
+            elif agent._affiliation == Affiliation.FLUMINENSE:
                 fluminense += 1
 
         if flamengo == 0 or fluminense == 0:

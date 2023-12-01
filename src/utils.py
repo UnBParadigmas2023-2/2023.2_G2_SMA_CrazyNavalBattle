@@ -1,5 +1,5 @@
 from src.Affiliation import Affiliation
-
+import mesa 
 def generate_random_position(model, filled_positions, affiliation):
     pos = None
     while pos is None or pos in filled_positions:
@@ -15,12 +15,13 @@ def generate_random_position(model, filled_positions, affiliation):
 
 
 def dist(a, b):
+    print('AB', a, b)
     return max(abs(a[0] - b[0]), abs(a[1] - b[1]))
 
-def closest_allie(self):
+def closest_enemy(currentAgent: mesa.Agent):
     allies = [
         agent
-        for agent in self.model.schedule.agents
-        if agent.affiliation != self.affiliation
+        for agent in currentAgent.model.schedule.agents
+        if agent._affiliation != currentAgent._affiliation and agent.pos is not None
     ]
-    return min(allies, key=lambda allie: dist(self.pos, allie.pos), default=None)
+    return min(allies, key=lambda allie: dist(currentAgent.pos, allie.pos), default=None)
