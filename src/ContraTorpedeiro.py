@@ -22,14 +22,5 @@ class ContraTorpedeiro(BoatAgent):
     def base_range(self):
         return 4  # Alcance balanceado para permitir interceptações
 
-    # def move(self):
-    #     # Lógica de movimento para manobrabilidade e posicionamento estratégico
-    #     # Mover em qualquer direção
-    #     a, b = self.pos
-    #     moves = [(1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (-1, -1), (1, -1), (-1, 1)]
-    #     for x, y in moves:
-    #         new_position = (a+x, b+y)
-    #         if self.model.grid.is_cell_empty(new_position):
-    #             self.pos = new_position
-    #             self.model.grid.move_agent(self, self.pos)
-    #             return 
+    def strong_against(self):
+        return {"Torpedeiro"}
