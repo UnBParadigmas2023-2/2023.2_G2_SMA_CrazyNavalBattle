@@ -25,13 +25,11 @@ O projeto **Crazy Naval Battle** é uma simulação envolvente de uma batalha na
 
 #### Agentes Envolvidos na Batalha:
 
-- **Barco Submarino:** Especializado em estratégias furtivas e ataques surpresa.
-- **Porta-Avião:** Oferece suporte aéreo e serve como uma base móvel para aeronaves.
 - **Cruzador:** Equilíbrio entre mobilidade e poder de fogo.
 - **Torpedeiro:** Focado em ataques de longa distância com torpedos.
 - **Morteiro:** Agente de longo alcance especializado em causar danos significativos.
-- **Contra-Torpedeiro:** Destinado a neutralizar ameaças de torpedos.
-- **Contra-Morteiro:** Especializado em defesa contra agentes de longo alcance.
+- **Contra-Torpedeiro:** Destinado a receber menos impacto dos torpedeiros.
+- **Contra-Morteiro:** Destinado a receber menos impacto dos morteiros.
 
 #### Configuração Personalizada:
 
@@ -42,8 +40,10 @@ O jogo permite que os usuários personalizem a quantidade de cada agente antes d
 O desenvolvimento do "Crazy Naval Battle" adota o paradigma de Sistemas Multiagentes, proporcionando uma representação fiel das interações complexas entre os diferentes agentes. Cada agente é autônomo, respondendo dinamicamente às condições do ambiente e às ações dos outros agentes, resultando em uma simulação envolvente e estratégica.
 
 ## Screenshots
+![Captura de tela de 2023-12-04 15-05-51](https://github.com/UnBParadigmas2023-2/2023.2_G2_SMA_CrazyNavalBattle/assets/65192073/1638c0d2-503c-4c01-95b7-9344344cd23c)
+![Captura de tela de 2023-12-04 15-06-15](https://github.com/UnBParadigmas2023-2/2023.2_G2_SMA_CrazyNavalBattle/assets/65192073/8f54a4b1-9e06-4ea8-9793-751b8dfa965c)
 
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+
 
 ## Instalação
 
@@ -100,20 +100,20 @@ Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
 O vídeo de apresentação está disponível em:
 
 - Youtube: [ACESSO]()
-- GitHub: [ACESSO]()
+- GitHub: [ACESSO](https://github.com/UnBParadigmas2023-2/2023.2_G2_SMA_CrazyNavalBattle)
 
 ## Participações
 
 | Nome do Membro                  | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | ------------------------------- | :----------: | :----------------------------------------------------------------------------: |
-| Adne Moretti Moreira            |      -       |                                       -                                        |
-| Caio Vitor Carneiro de Oliveira |      -       |                                       -                                        |
-| Cícero Barrozo Fernandes Filho  |      -       |                                       -                                        |
-| Gabriel Costa de Oliveira       |      -       |                                       -                                        |
-| Gabriel Moretti de Souza        |      -       |                                       -                                        |
-| Guilherme Puida Moreira         |      -       |                                       -                                        |
-| João Henrique Marques Calzavara |      -       |                                       -                                        |
-| Lucas Lopes Rocha               |      -       |                                       -                                        |
+| Adne Moretti Moreira            |      Morteiro, ContraMorteiro e integrações finais.       |                                       Excelente                                        |
+| Caio Vitor Carneiro de Oliveira |      Criação do mapa e integrações finais.       |                                      Excelente                                        |
+| Cícero Barrozo Fernandes Filho  |      Torpedeiro, ContraTorpedeiro e integrações finais.       |                                       Excelente                                        |
+| Gabriel Costa de Oliveira       |      Makefile, Cruzador e integrações finais.       |                                       Excelente                                        |
+| Gabriel Moretti de Souza        |      Cruzador e integrações finais.       |                                       Excelente                                        |
+| Guilherme Puida Moreira         |      Criação do Boat e integrações finais.       |                                       Excelente                                        |
+| João Henrique Marques Calzavara |      Torpedeiro, ContraTorpedeiro e integrações finais.       |                                       Excelente                                        |
+| Lucas Lopes Rocha               |      Morteiro, ContraMorteiro e integrações finais.       |                                       Excelente                                        |
 
 ## Outros
 
