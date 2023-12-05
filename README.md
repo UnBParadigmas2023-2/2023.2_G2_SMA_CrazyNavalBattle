@@ -104,8 +104,8 @@ Após a quantidade de agentes ter sido definida, basta apertar "Start" que a sim
 
 O vídeo de apresentação está disponível em:
 
-- Youtube: [ACESSO]()
-- GitHub: [ACESSO](https://github.com/UnBParadigmas2023-2/2023.2_G2_SMA_CrazyNavalBattle)
+- Youtube: [ACESSO](https://youtu.be/ToT7ObT-Yik?si=aEZqTY_Qzgx3tKv0)
+- GitHub: não foi possível incluir o vídeo no GitHub devido ao seu tamanho
 
 ## Participações
 
