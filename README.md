@@ -90,11 +90,16 @@ Esse comando automaticamente cria um `venv`, instala as dependências e
 executa o servidor.
 
 ## Uso
+Com a aplicação rodando, é possível selecionar a quantidade de cada agente no mapa através do sidebar que foi criado com alguns sliders.
+![Captura de tela de 2023-12-04 21-07-59](https://github.com/UnBParadigmas2023-2/2023.2_G2_SMA_CrazyNavalBattle/assets/65192073/221ccbb2-7177-49bd-9145-dcca68d4641a)
 
-Explique como usar seu projeto.
-Procure ilustrar em passos, com apoio de telas do software, seja com base na interface gráfica, seja com base no terminal.
-Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
 
+Após alterar a quantidade de agente pelos sliders, deve-se apertar o botão reset para que a mudança aconteça em tela, respeitando então a quantidade de agentes referentes ao sidebar.
+![Captura de tela de 2023-12-04 21-14-42](https://github.com/UnBParadigmas2023-2/2023.2_G2_SMA_CrazyNavalBattle/assets/65192073/151260c9-06ae-490d-ae0d-7f078a0ec670)
+
+![Captura de tela de 2023-12-04 21-09-56](https://github.com/UnBParadigmas2023-2/2023.2_G2_SMA_CrazyNavalBattle/assets/65192073/a20c8476-ad5b-47ec-8911-7bd42a28e8cb)
+
+Após a quantidade de agentes ter sido definida, basta apertar "Start" que a simulação irá iniciar, vale salientar também que a quantidade de frames pode ser alterada pelo slider superior, aumentando a velocidade com que a simulação ocorre
 ## Vídeo
 
 O vídeo de apresentação está disponível em:
