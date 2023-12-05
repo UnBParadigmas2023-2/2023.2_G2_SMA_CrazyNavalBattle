@@ -31,13 +31,25 @@ O projeto **Crazy Naval Battle** é uma simulação envolvente de uma batalha na
 - **Contra-Torpedeiro:** Destinado a receber menos impacto dos torpedeiros.
 - **Contra-Morteiro:** Destinado a receber menos impacto dos morteiros.
 
+
+
+### Sistemas
+
+- **Ataque:** Utilizando **iter_neighborhood** Pegamos as celulas vizinhas e retornamos vizinhos que possuem afiliação diferente, e atacamos ele
+- **Receber Dano:** Toda vez que um agente ataca um inimigo ele recebe o dano correspondente do inimigo.
+- **Mudar de Posicao:** Utilizando **generate_random_position** Os agentes mudam de posições de forma aleatoria com base na posições ainda restantes 
+
 #### Configuração Personalizada:
 
 O jogo permite que os usuários personalizem a quantidade de cada agente antes de iniciar a simulação, oferecendo uma experiência única a cada execução. Essa flexibilidade proporciona a criação de cenários diversos, desafiando os jogadores a explorar estratégias diferentes em cada simulação.
 
 #### Paradigma de Sistemas Multiagentes (SMA):
 
-O desenvolvimento do "Crazy Naval Battle" adota o paradigma de Sistemas Multiagentes, proporcionando uma representação fiel das interações complexas entre os diferentes agentes. Cada agente é autônomo, respondendo dinamicamente às condições do ambiente e às ações dos outros agentes, resultando em uma simulação envolvente e estratégica.
+O desenvolvimento do "Crazy Naval Battle" adota o paradigma de Sistemas Multiagentes, proporcionando uma representação fiel das interações complexas entre os diferentes agentes. Cada agente é autônomo, respondendo dinamicamente às condições do ambiente e às ações dos outros agentes, resultando em uma simulação 
+envolvente e estratégica.
+
+## Demostração do Jogo Rodando
+![gif](assets/gaming.gif)
 
 ## Screenshots
 ![Captura de tela de 2023-12-04 15-05-51](https://github.com/UnBParadigmas2023-2/2023.2_G2_SMA_CrazyNavalBattle/assets/65192073/1638c0d2-503c-4c01-95b7-9344344cd23c)
@@ -154,5 +166,7 @@ O vídeo de apresentação está disponível em:
 > Linguagem de programação: https://www.python.org/;
 
 > Interface gráfica (Mesa): https://mesa.readthedocs.io/en/stable/;
+
+> Criação do Grid: https://mesa.readthedocs.io/en/latest/apis/space.html
 
 > Sistemas Multiagentes (SMA): https://pt.wikipedia.org/wiki/Sistema_multiagente;
